@@ -1,6 +1,6 @@
 # box-office-mojo-movie-title
 
-> Get the title of a Box Office Mojo's movie via its HTML
+> Get the title of a Box Office Mojo's movie via its HTML.
 
 [![Build Status](https://travis-ci.org/alebelcor/box-office-mojo-movie-title.svg)](https://travis-ci.org/alebelcor/box-office-mojo-movie-title)
 
