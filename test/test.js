@@ -32,7 +32,7 @@ test('it should return a string', function (t) {
 test('it should throw an error when there\'s no title or it can\'t find it', function (t) {
   var fixture = fs.readFileSync(path.join(FIXTURE_DIR, 'no-title.html'), 'utf8');
 
-  t.throws(function () { return boxOfficeMojoMovieTitle(); });
+  t.throws(function () { return boxOfficeMojoMovieTitle(fixture); });
   t.end();
 });
 
