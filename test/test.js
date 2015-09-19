@@ -29,6 +29,13 @@ test('it should return a string', function (t) {
   t.end();
 });
 
+test('it should remove HTML from the title', function (t) {
+  var fixture = fs.readFileSync(path.join(FIXTURE_DIR, 'html-in-title.html'), 'utf8');
+
+  t.same('The Lord of the Rings: The Return of the King', boxOfficeMojoMovieTitle(fixture));
+  t.end();
+});
+
 test('it should throw an error when there\'s no title or it can\'t find it', function (t) {
   var fixture = fs.readFileSync(path.join(FIXTURE_DIR, 'no-title.html'), 'utf8');
 

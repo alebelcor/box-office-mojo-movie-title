@@ -2,8 +2,14 @@
 
 var cheerio = require('cheerio');
 
+function stripHTML(text) {
+  return text
+    .replace('<br>', ' ')
+    .trim();
+}
+
 function getMovieTitle($) {
-  return $('td > table:nth-child(1) > tbody > tr > td:nth-child(2) > font > b').text();
+  return stripHTML($('td > table:nth-child(1) > tbody > tr > td:nth-child(2) > font > b').html());
 }
 
 module.exports = function (html) {
