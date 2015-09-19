@@ -3,7 +3,13 @@
 var cheerio = require('cheerio');
 
 function stripHTML(text) {
-  return text
+  var title = text;
+
+  if (title == null) {
+    title = '';
+  }
+
+  return title
     .replace('<br>', ' ')
     .trim();
 }
