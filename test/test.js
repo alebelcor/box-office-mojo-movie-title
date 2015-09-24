@@ -23,16 +23,9 @@ test('it should get the title when given partial HTML', function (t) {
 });
 
 test('it should return a string', function (t) {
-  var fixture = fs.readFileSync(path.join(FIXTURE_DIR, 'partial.html'), 'utf8');
+  var fixture = fs.readFileSync(path.join(FIXTURE_DIR, 'full.html'), 'utf8');
 
   t.same('string', typeof boxOfficeMojoMovieTitle(fixture));
-  t.end();
-});
-
-test('it should remove HTML from the title', function (t) {
-  var fixture = fs.readFileSync(path.join(FIXTURE_DIR, 'html-in-title.html'), 'utf8');
-
-  t.same('The Lord of the Rings: The Return of the King', boxOfficeMojoMovieTitle(fixture));
   t.end();
 });
 

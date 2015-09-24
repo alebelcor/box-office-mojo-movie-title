@@ -2,21 +2,19 @@
 
 var cheerio = require('cheerio');
 
-function stripHTML(title) {
-  return title
-    .replace('<br>', ' ')
+function getCleanTitle(title) {
+  return title.split('(')[0]
     .trim();
 }
 
 function getMovieTitle($) {
-  var collection = $('td > font > b');
-  var titleElement = collection.first();
+  var titleElement = $('title').first();
 
-  if (collection.length < 11 || titleElement == null) {
+  if (titleElement == null) {
     throw new Error('Movie title was not found.');
   }
 
-  return stripHTML(titleElement.html());
+  return getCleanTitle(titleElement.text());
 }
 
 module.exports = function (html) {
@@ -28,6 +26,7 @@ module.exports = function (html) {
   }
 
   $ = cheerio.load(html);
+
   movieTitle = getMovieTitle($);
 
   if (movieTitle.length === 0) {

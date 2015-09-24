@@ -14,7 +14,7 @@ npm install --save box-office-mojo-movie-title
 
 ```js
 var boxOfficeMojoTitle = require('box-office-mojo-movie-title');
-var pulpFictionHTML = '<td><table><tbody><tr><td><img src=""><td><br><font><b>Pulp Fiction</b></font></table>';
+var pulpFictionHTML = '<html><head><title>Pulp Fiction (1994) - Box Office Mojo</title></head>/<html>';
 
 boxOfficeMojoTitle(pulpFictionHTML); // 'Pulp Fiction'
 ```
