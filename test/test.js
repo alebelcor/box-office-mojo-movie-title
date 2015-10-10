@@ -6,7 +6,7 @@ var path = require('path');
 var test = require('ava');
 var boxOfficeMojoMovieTitle = require('../');
 
-var FIXTURE_DIR = path.join(process.cwd(), 'test/fixture');
+var FIXTURE_DIR = path.join(process.cwd(), 'test', 'fixture');
 
 test('it should get the title when given full HTML', function (t) {
   var fixture = fs.readFileSync(path.join(FIXTURE_DIR, 'full.html'), 'utf8');
