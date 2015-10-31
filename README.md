@@ -2,7 +2,9 @@
 
 > Get the title of a Box Office Mojo's movie via its HTML.
 
+[![npm version](https://img.shields.io/npm/v/box-office-mojo-movie-title.svg)](https://npmjs.org/package/box-office-mojo-movie-title)
 [![Build Status](https://travis-ci.org/alebelcor/box-office-mojo-movie-title.svg)](https://travis-ci.org/alebelcor/box-office-mojo-movie-title)
+[![Test Coverage](https://img.shields.io/coveralls/alebelcor/box-office-mojo-movie-title/master.svg)](https://coveralls.io/github/alebelcor/box-office-mojo-movie-title)
 
 ## Install
 
