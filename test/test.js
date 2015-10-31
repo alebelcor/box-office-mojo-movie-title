@@ -6,7 +6,7 @@ var path = require('path');
 var test = require('ava');
 var boxOfficeMojoMovieTitle = require('../');
 
-var FIXTURE_DIR = path.join(process.cwd(), 'test', 'fixture');
+var FIXTURE_DIR = path.resolve('.', 'fixture');
 
 test('it should get the title when given full HTML', function (t) {
   var fixture = fs.readFileSync(path.join(FIXTURE_DIR, 'full.html'), 'utf8');
@@ -29,8 +29,15 @@ test('it should return a string', function (t) {
   t.end();
 });
 
-test('it should throw an error when there\'s no title or it can\'t find it', function (t) {
+test('it should throw an error when there\'s no title', function (t) {
   var fixture = fs.readFileSync(path.join(FIXTURE_DIR, 'no-title.html'), 'utf8');
+
+  t.throws(function () { return boxOfficeMojoMovieTitle(fixture); });
+  t.end();
+});
+
+test('it should throw an error when the title is blank', function (t) {
+  var fixture = fs.readFileSync(path.join(FIXTURE_DIR, 'blank-title.html'), 'utf8');
 
   t.throws(function () { return boxOfficeMojoMovieTitle(fixture); });
   t.end();

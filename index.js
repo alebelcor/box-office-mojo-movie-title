@@ -10,7 +10,7 @@ function getCleanTitle(title) {
 function getMovieTitle($) {
   var titleElement = $('title').first();
 
-  if (titleElement == null) {
+  if (titleElement.length === 0) {
     throw new Error('Movie title was not found.');
   }
 
