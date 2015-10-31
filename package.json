@@ -1,6 +1,6 @@
 {
   "name": "box-office-mojo-movie-title",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Get the title of a Box Office Mojo's movie via its HTML",
   "keywords": [
     "box office mojo",
